@@ -178,6 +178,8 @@ L’objectif du système d’information est de :
 
 ________________________________________
 
+#  Le MCD
+
 <img width="2517" height="1096" alt="image" src="https://github.com/user-attachments/assets/50cb44cf-c4db-4843-a75b-b466d41a18fb" />
 
 
