@@ -1,0 +1,154 @@
+Donne les requêtes d’insertion permettant de remplir la base de données dont le modèle relationnel est le suivant :
+ 
+JEU(id_jeu, titre, editeur, date_sortie)
+-- PK : id_jeu
+
+
+PLATEFORME(id_plateforme, nom, #id_jeu)
+-- PK : id_plateforme
+-- FK : id_jeu → JEU(id_jeu)
+
+
+LIEU(id_lieu, nom, description, niveau_minimum, statut_validation, #id_jeu)
+-- PK : id_lieu
+-- FK : id_jeu → JEU(id_jeu)
+
+
+DONNE_ACCES_A(#id_lieu, #id_lieu_1)
+-- PK : (id_lieu, id_lieu_1)
+-- FK : id_lieu   → LIEU(id_lieu)
+-- FK : id_lieu_1 → LIEU(id_lieu)
+
+
+RACE(id_race, nom)
+-- PK : id_race
+
+
+PERSONNAGE(id_personnage, nom, type_personnage, description, niveau_minimum, statut_validation, #id_race, #id_jeu)
+-- PK : id_personnage
+-- FK : id_race → RACE(id_race)
+-- FK : id_jeu → JEU(id_jeu)
+
+
+DONJON(id_donjon, nom, description, niveau_minimum, statut_validation, #id_jeu)
+-- PK : id_donjon
+-- FK : id_jeu → JEU(id_jeu)
+
+
+ENNEMI(id_ennemi, nom, points_vie, points_attaque, points_defense, description, niveau_minimum, statut_validation, #id_jeu)
+-- PK : id_ennemi
+-- FK : id_jeu → JEU(id_jeu)
+
+
+BOSS(id_boss, description, statut_validation, #id_donjon, #id_ennemi)
+-- PK : id_boss
+-- FK : id_donjon → DONJON(id_donjon)
+-- FK : id_ennemi → ENNEMI(id_ennemi)
+
+
+HEBERGER(#id_donjon, #id_ennemi)
+-- PK : (id_donjon, id_ennemi)
+-- FK : id_donjon → DONJON(id_donjon)
+-- FK : id_ennemi → ENNEMI(id_ennemi)
+
+
+LIVRE(id_livre, #id_jeu)
+-- PK : id_livre
+-- FK : id_jeu → JEU(id_jeu)
+
+
+SECTION(id_section, categorie, #id_livre)
+-- PK : id_section
+-- FK : id_livre → LIVRE(id_livre)
+
+
+MINI_JEU(id_mini_jeu, nom, description, niveau_minimum, statut_validation)
+-- PK : id_mini_jeu
+
+
+OBJET(id_objet, nom, rarete, description, niveau_minimum, statut_validation, #id_jeu)
+-- PK : id_objet
+-- FK : id_jeu → JEU(id_jeu)
+
+
+OCTROYER(#id_mini_jeu, #id_objet)
+-- PK : (id_mini_jeu, id_objet)
+-- FK : id_mini_jeu → MINI_JEU(id_mini_jeu)
+-- FK : id_objet → OBJET(id_objet)
+
+
+QUETE(id_quete, type_quete, recompense_experience, description, niveau_minimum, statut_validation, #id_jeu, #id_mini_jeu)
+-- PK : id_quete
+-- FK : id_jeu → JEU(id_jeu)
+-- FK : id_mini_jeu → MINI_JEU(id_mini_jeu)
+
+
+RECOMPENSE_PAR(#id_quete, #id_objet)
+-- PK : (id_quete, id_objet)
+-- FK : id_quete → QUETE(id_quete)
+-- FK : id_objet → OBJET(id_objet)
+
+Les clés primaires correspondent aux id, sauf si autre chose est précisé (quand c'est un attribut composé) les clés étrangères sont identifiées par les #, et ont le même nom que les clés primaires auxquelles elles font référence.
+
+- JEU : 10 (L’entreprise publie des livres pour plusieurs jeux, mais pas des centaines.)
+- PLATEFORME : 20 (Chaque jeu peut être sur 2–4 plateformes (PC, PS5, Switch…).)
+- LIEU : 30 (Un jeu contient plusieurs zones, villes, régions.)
+- DONNE_ACCES_A : 30 (Chaque lieux peut donner accès à plusieurs lieux.)
+- RACE : 10 (Les jeux ont peu de races (humain, elfe...).)
+- PERSONNAGE : 50 (Entre PNJ, alliés, marchands, personnages secondaires…)
+- DONJON : 10 (Un jeu contient quelques donjons majeurs.)
+- ENNEMI : 100 (C’est l’une des tables les plus peuplées : monstres, créatures, variantes…)
+- BOSS : 10 (En général, 1 boss par donjon + quelques boss optionnels.)
+- HEBERGER : 100 (Chaque donjon contient plusieurs ennemis, et les ennemis peuvent apparaître dans plusieurs zones.)
+- LIVRE : 10 (Un livre par jeu.)
+- SECTION : 90 (Chaque livre contient plusieurs sections (personnages, quêtes, objets…).)
+- MINI_JEU : 30 (Quelques mini‑jeux par jeu.)
+- OBJET : 80 (Objets communs, rares, légendaires, consommables, équipements…)
+- OCTROYER : 90 (Chaque mini‑jeu peut donner plusieurs objets.)
+- QUETE : 50 (Quêtes principales + secondaires.)
+- RECOMPENSE_PAR : 50 (Chaque quête peut donner plusieurs objets.)
+
+Les clés étrangères doivent faire référence aux clés primaires existantes : donne les lignes en commençant par remplir les tables dans lesquelles il n'y a pas de clés étrangères, puis les tables dans lesquelles les clés étrangères font références à des clés primaires des tables déjà remplies. 
+
+Ordre d'insertion à respecter :
+1) JEU
+2) RACE
+3) PLATEFORME
+4) LIEU
+5) DONNE_ACCES_A
+6) DONJON
+7) ENNEMI
+8) MINI_JEU
+9) OBJET
+10) QUETE
+11) LIVRE
+12) SECTION
+13) PERSONNAGE
+14) BOSS
+15) HEBERGER
+16) OCTROYER
+17) RECOMPENSE_PAR
+
+Respecte les contraintes de validation de 2_contraintes.sql lors de l'insertion.
+
+Fournis l'ensemble sous la forme d’un script SQL prêt à être exécuté.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
