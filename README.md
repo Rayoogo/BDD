@@ -180,6 +180,131 @@ ________________________________________
 
 #  Le MCD
 
-<img width="2517" height="1096" alt="image" src="https://github.com/user-attachments/assets/50cb44cf-c4db-4843-a75b-b466d41a18fb" />
+<img width="1522" height="655" alt="image" src="https://github.com/user-attachments/assets/f8cfe04c-654c-4d0d-a2a3-89c9303074bf" />
+
+________________________________________
+
+#  Le MLD
+
+<img width="1522" height="665" alt="image" src="https://github.com/user-attachments/assets/2b13e259-b40f-4a9b-a332-9996ea61f637" />
+
+________________________________________
+
+#  Le scénario d'utilisation 
+
+##  Scénario d'utilisation n°1
+
+Rôle : Rédacteur en chef des guides officiels
+L’entreprise emploie un rédacteur en chef, chargé de produire les contenus des livres tutoriels.
+Son travail consiste à :
+
+- préparer les chapitres du livre (personnages, donjons, quêtes, objets, etc.)
+- vérifier la cohérence des informations
+- sélectionner les données pertinentes pour chaque jeu
+- organiser les sections du livre
+- préparer les fiches détaillées (boss, ennemis, objets rares, etc.)
+
+Pour cela, il doit interroger la base de données afin d’extraire les informations nécessaires à la rédaction.
+
+Objectif du rédacteur :
+Créer un livre tutoriel complet pour un jeu donné (ex : Elden Ring), contenant :
+
+- la liste des personnages importants
+- les races présentes
+- les lieux majeurs
+- les donjons et leurs boss
+- les ennemis rencontrés
+- les objets importants
+- les mini‑jeux
+- les quêtes principales et secondaires
+
+Il doit aussi pouvoir :
+
+- comparer la difficulté des donjons
+- identifier les objets les plus rares
+- repérer les boss les plus puissants
+- analyser les statistiques des ennemis
+- vérifier la cohérence des données avant publication
+
+________________________________________
+
+#  BONUS : Les scénarios d'utilisations supplémentaires
+
+##  Scénario n°2 
+
+Rôle : Responsable marketing des guides
+L’entreprise publie plusieurs collections de livres tutoriels (guides complets, guides avancés, guides thématiques).
+Le responsable marketing doit décider :
+
+- quels jeux méritent un guide complet (beaucoup de contenu, bestiaire riche, quêtes nombreuses)
+- quels jeux méritent un guide avancé (difficulté élevée, boss marquants, objets rares)
+- quels jeux peuvent être couverts dans des guides thématiques (mini‑jeux, quêtes secondaires, loot spécifique)
+
+Son travail consiste à :
+
+- analyser la richesse de contenu par jeu (donjons, ennemis, objets, quêtes)
+- identifier les jeux avec fort potentiel commercial
+- préparer des rapports chiffrés pour la direction éditoriale
+- prioriser les jeux pour les prochaines sorties de livres
+- Pour cela, il interroge la base pour obtenir des statistiques globales par jeu.
+
+Objectifs du responsable marketing
+Il doit pouvoir :
+
+- comparer les jeux selon :
+- le nombre de donjons
+- le nombre d’ennemis
+- le nombre d’objets (et leur rareté)
+- le nombre de quêtes principales / secondaires
+
+repérer les jeux :
+
+- avec beaucoup d’ennemis puissants
+- avec beaucoup d’objets légendaires
+- avec une progression principale très récompensante (XP)
+- identifier les jeux à fort potentiel pour :
+- un guide complet (contenu massif)
+- un guide avancé (difficulté élevée)
+- un guide thématique (mini‑jeux, loot rare, etc.)
+##  
+<br>
+
+##  Scénario n°3 
+
+Rôle : Responsable qualité éditoriale
+Avant publication d’un guide, la responsable qualité éditoriale doit s’assurer que toutes les données présentes dans le système d’information sont cohérentes, complètes et prêtes à être intégrées dans un ouvrage professionnel.
+
+- vérifier que les données sont cohérentes et complètes
+- repérer les éléments en statut brouillon
+- identifier les trous de données (donjons sans boss, quêtes sans récompense, objets jamais obtenus, etc.)
+- s’assurer que les niveaux minimums, raretés, XP, etc. sont logiques
+
+Elle travaille en lien avec les rédacteurs et les développeurs pour :
+
+- signaler les incohérences
+- demander des corrections ou compléments
+- valider les données avant impression
+
+Objectifs de la responsable qualité éditoriale
+Elle doit pouvoir :
+
+- lister tous les éléments en statut brouillon
+
+repérer :
+
+- les donjons sans boss
+- les quêtes sans récompense
+- les objets jamais donnés par mini‑jeu ou quête
+- les ennemis jamais associés à un donjon
+
+analyser :
+
+- les niveaux minimums extrêmes
+- les objets trop exigeants
+- les quêtes trop peu ou trop très récompensées
+
+________________________________________
+
+
 
 
